@@ -6,7 +6,7 @@
 ## Deployment Link:
 
 ## Screenshots:
-![Screenshot](/io.png)
+<!-- ![Screenshot](/io.png) -->
 
 ## Technologies Used:
 #### API:
