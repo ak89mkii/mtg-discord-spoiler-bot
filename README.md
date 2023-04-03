@@ -14,8 +14,9 @@
 #### Back-End:
 - Node.js
 #### Packages:
-// Discord.js
-// dotenv
+- Discord.js
+- dotenv
+- undici
 #### Version Control:
 - Git
 - GitHub
@@ -24,7 +25,7 @@
 # References:
 #### Development Environment:
 // https://www.codecademy.com/article/christine_yang/build-a-discord-bot-with-node-js
-// 
+// https://discordjs.guide/additional-info/rest-api.html#making-http-requests-with-node
 #### Deployment:
 // 
 #### Depoyment Troubleshooting:
