@@ -3,5 +3,24 @@
     "discord.js": "^14.9.0",
     "dotenv": "^16.0.3",
     "undici": "^5.21.0"
-  }
+  },
+  "name": "mtg-discord-spoiler-bot",
+  "description": "## Description: (Back-End, Node.js) | Discord bot that will interact with Scryfall api to display new card spoilers.",
+  "version": "1.0.0",
+  "main": "discordbot.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ak89mkii/mtg-discord-spoiler-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ak89mkii/mtg-discord-spoiler-bot/issues"
+  },
+  "homepage": "https://github.com/ak89mkii/mtg-discord-spoiler-bot#readme"
 }
