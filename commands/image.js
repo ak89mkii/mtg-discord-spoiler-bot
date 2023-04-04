@@ -8,6 +8,6 @@ module.exports = {
 	async execute(interaction) {
 		const cardResult = await request('https://api.scryfall.com/cards/search?order=released&q=year=2023');
 		const { file } = await cardResult.body.json();
-		await interaction.reply({ files: [file.data[i].image_uris.small] });
+		await interaction.deferReply({ files: [file] });
 	},
 };
