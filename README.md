@@ -29,7 +29,9 @@
 #### Deployment:
 // 
 #### Depoyment Troubleshooting:
-//
+// https://discordjs.guide/additional-info/rest-api.html#skeleton-code
+// https://discordjs.guide/slash-commands/response-methods.html#ephemeral-responses
+// https://discordjs.guide/additional-info/rest-api.html#making-http-requests-with-node
 #### Information References:
 // 
 #### Images References / Credits:
