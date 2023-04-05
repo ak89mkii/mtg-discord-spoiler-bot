@@ -12,13 +12,17 @@ module.exports = {
             return res.json();
         })
         .then( async test => {
-            for(let i=0; i<5; i++) {
-                let set = [test.data[i].set_name]
-                console.log(set)
+            let dataSet = []
+            let dataImg = []
+            for(let i=10; i<15; i++) {
+                dataSet.push( '\n' + '**Card Set:** ' + '\n' + test.data[i].set_name)
+                console.log(dataSet)
+                dataSet.push( '\n' + '**Card Image Link:** ' + '\n' + test.data[i].image_uris.large)
+
             }
                 console.log(test.data[10].set_name)
             
-                await interaction.reply('**Card Set:** ' + '\n' + test.data[10].set_name + '\n' + test.data[10].image_uris.large);
+                await interaction.reply(dataSet + '\n' + dataImg + '\n');
 
                 // await interaction.reply('**Card Set:** ' + '\n' + set + '\n' + test.data[i].image_uris.large);
             // }
