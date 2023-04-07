@@ -14,7 +14,7 @@ module.exports = {
         .then( async test => {
             let dataSet = []
             let dataImg = []
-            for(let i=10; i<15; i++) {
+            for(let i=10; i<20; i++) {
                 dataSet.push( '\n' + '**Card Set:** ' + '\n' + test.data[i].set_name)
                 console.log(dataSet)
                 dataSet.push( '\n' + '**Card Image Link:** ' + '\n' + test.data[i].image_uris.large)
