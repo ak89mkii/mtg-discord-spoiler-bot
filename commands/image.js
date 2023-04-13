@@ -6,7 +6,7 @@ module.exports = {
 		.setName('newmtg')
 		.setDescription("Shows this year's (2023) MTG card spoilers."),
 	async execute(interaction) {
-        let initAutoSend01 = new cron.CronJob('00 32 02,15 * * *', () => {
+        let initAutoSend01 = new cron.CronJob('00 22 13,15 * * *', () => {
 
             fetch("https://api.scryfall.com/cards/search?order=released&q=year=2023")
             .then(res => {
@@ -24,7 +24,7 @@ module.exports = {
                 console.log(aPIData.data[0].set_name)
 
                 // await interaction.reply(dataSet + '\n' + dataImg + '\n');
-                await interaction.reply("Test!");
+                // await interaction.reply("Test!");
 
             });
         });
