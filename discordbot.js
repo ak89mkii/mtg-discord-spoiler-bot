@@ -4,14 +4,13 @@ require('dotenv').config();
 const fs = require('node:fs');
 const path = require('node:path');
 // Discord.js versions ^13.0 require us to explicitly define client intents.
-const { Client, EmbedBuilder, Events, GatewayIntentBits, Collection } = require('discord.js');
-// Imports undici library.
-const { request } = require('undici');
-
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const { Client, EmbedBuilder, Events, GatewayIntentBits, Collection, IntentsBitField } = require('discord.js');
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, ] });
 
 client.commands = new Collection();
 
+
+// Slash Command Path:
 const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
@@ -26,11 +25,15 @@ for (const file of commandFiles) {
 	}
 }
 
+
+// Bot Initialization Message:
 client.once(Events.ClientReady, c => {
 	console.log('Ready!');
     console.log(`Logged in as ${c.user.tag}!`);
 });
 
+
+// Sends Slash Commands:
 client.on(Events.InteractionCreate, async interaction => {
     if (!interaction.isChatInputCommand()) return;
 	console.log(interaction);
@@ -53,22 +56,6 @@ client.on(Events.InteractionCreate, async interaction => {
 	}
 });
 
-// client.on('interactionCreate', async (interaction) => {
-// 	if (!interaction.isChatInputCommand()) return;
 
-// 	if (interaction.commandName === 'ping') {
-// 		await interaction.reply('Pong!');
-// 	}
-// });
-
-// client.on(Events.InteractionCreate, async interaction => {
-// 	// ...
-// 	if (commandName === 'cat') {
-// 		const catResult = await request('https://aws.random.cat/meow');
-// 		const { file } = await catResult.body.json();
-// 		interaction.editReply({ files: [file] });
-// 	}
-// });
-
-// Log In our bot.
+// Log In Our Bot:
 client.login(process.env.CLIENT_TOKEN);

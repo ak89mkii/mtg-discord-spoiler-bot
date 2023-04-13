@@ -22,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/ak89mkii/mtg-discord-spoiler-bot/issues"
   },
-  "homepage": "https://github.com/ak89mkii/mtg-discord-spoiler-bot#readme"
+  "homepage": "https://github.com/ak89mkii/mtg-discord-spoiler-bot#readme",
+  "devDependencies": {}
 }
