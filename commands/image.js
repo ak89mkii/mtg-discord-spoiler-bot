@@ -8,7 +8,7 @@ module.exports = {
 	async execute(interaction) {
         // let initAutoSend01 = new cron.CronJob('00 22 13,15 * * *', () => {
             interaction.deferReply();
-            setTimeout(() => {
+            setInterval(() => {
             fetch("https://api.scryfall.com/cards/search?order=released&q=year=2023")
             .then(res => {
                 return res.json();
@@ -24,8 +24,8 @@ module.exports = {
                 console.log(aPIData.data[0].set_name)
                 console.log(aPIData.data[0].set_name)
 
-                // await interaction.reply(dataSet + '\n' + dataImg + '\n');
-                await interaction.editReply("Test!");
+                await interaction.followUp(dataSet + '\n' + dataImg + '\n');
+                // await interaction.editReply("Test!");
 
             });
         }, 10000) 
