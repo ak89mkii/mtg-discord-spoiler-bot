@@ -10,9 +10,11 @@
 
 ## Technologies Used:
 #### API:
-- Scryfall
+- Scryfall Docs:
 // https://scryfall.com/docs/syntax
 // https://scryfall.com/docs/api/cards/search
+- Scryfall HTTP Requests:
+// https://api.scryfall.com/cards/search?order=released&q=year=2023
 #### Back-End:
 - Node.js
 #### Packages:
