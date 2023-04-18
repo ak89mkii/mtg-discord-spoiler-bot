@@ -16,7 +16,7 @@ module.exports = {
             .then( async aPIData => { 
                 let dataSet = []
                 let dataImg = []
-                for(let i=0; i<5; i++) {
+                for(let i=0; i<4; i++) {
                     dataSet.push( '\n' + '**Card Set:** ' + '\n' + aPIData.data[i].set_name)
                     dataSet.push( '\n' + '**Card Image Link:** ' + '\n' + aPIData.data[i].image_uris.large)
 
